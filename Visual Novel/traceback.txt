@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 491, in script
+    show Remy normal
+Exception: Image 'Remy' does not accept attributes 'normal'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 491, in script
+    show Remy normal
+  File "/Users/dominiclau/Documents/renpy-8.3.7-sdk/renpy/ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Users/dominiclau/Documents/renpy-8.3.7-sdk/renpy/ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "/Users/dominiclau/Documents/renpy-8.3.7-sdk/renpy/exports/displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "/Users/dominiclau/Documents/renpy-8.3.7-sdk/renpy/display/image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "/Users/dominiclau/Documents/renpy-8.3.7-sdk/renpy/display/displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "/Users/dominiclau/Documents/renpy-8.3.7-sdk/renpy/display/displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'Remy' does not accept attributes 'normal'.
+
+macOS-15.4.1-arm64-arm-64bit arm64
+Ren'Py 8.3.7.25031702
+Visual Novel 1.0
+Wed Jul 16 21:47:43 2025
